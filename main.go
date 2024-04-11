@@ -12,15 +12,15 @@ type Laptop struct {
 
 func genLaptops() []Laptop {
 	laptops := []Laptop{
-		{3, 4},
-		{2, 5},
-		{1, 6},
-		{5, 4},
-		{7, 3},
-		{7, 4},
-		{8, 2},
-		{12, 6},
-		{14, 8},
+		{Gain: 3, Price: 4},
+		{Gain: 2, Price: 5},
+		{Gain: 1, Price: 6},
+		{Gain: 5, Price: 4},
+		{Gain: 7, Price: 3},
+		{Gain: 7, Price: 4},
+		{Gain: 8, Price: 2},
+		{Gain: 12, Price: 6},
+		{Gain: 14, Price: 8},
 	}
 	return laptops
 }
@@ -29,7 +29,7 @@ func getMaxCapital(N int, C float64, laptops []Laptop) float64 {
 	if len(laptops) == 0 || N == 0 || C == 0 {
 		return C
 	}
-	
+
 	// max <-
 	sort.Slice(laptops, func(i, j int) bool {
 		return ((laptops[i].Gain - laptops[i].Price) / laptops[i].Price) > ((laptops[j].Gain - laptops[j].Price) / laptops[j].Price)
