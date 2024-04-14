@@ -11,3 +11,5 @@ Run main
 
 Run test
 `go test`
+
+Approximate time for completing the task is 5 hours.
